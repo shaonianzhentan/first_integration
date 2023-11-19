@@ -1,0 +1,9 @@
+{
+  "domain": "first_integration",
+  "name": "我的插件",
+  "version": "1.0",
+  "config_flow": true,
+  "documentation": "https://github.com/shaonianzhentan/first_integration",
+  "requirements": [],
+  "codeowners": [ "@shaonianzhentan" ]
+}

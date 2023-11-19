@@ -1,0 +1,10 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {},
+        "description": "这里是一些简单的描述内容"
+      }
+    }
+  }
+}
