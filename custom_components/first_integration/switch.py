@@ -16,3 +16,16 @@ class MySwitch(SwitchEntity):
 
     def __init__(self):
         pass
+    
+    async def async_update(self):
+        pass
+    
+    async def async_turn_on(self, **kwargs):
+        ''' 打开 '''
+        self._attr_is_on = True
+        self.hass.bus.fire('switch_update_event', { 'state': self._attr_is_on })
+    
+    async def async_turn_off(self, **kwargs):
+        ''' 关闭 '''
+        self._attr_is_on = False
+        self.hass.bus.fire('switch_update_event', { 'state': self._attr_is_on })
