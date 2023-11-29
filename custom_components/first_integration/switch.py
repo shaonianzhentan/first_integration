@@ -10,13 +10,15 @@ async def async_setup_entry(
     config_entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    async_add_entities([MySwitch()])
+    async_add_entities([MySwitch(config_entry)])
 
 class MySwitch(SwitchEntity):
 
-    def __init__(self):
-        pass
-    
+    def __init__(self, config_entry):        
+        self._attr_unique_id = f'{config_entry.entry_id}-switch'
+        self._attr_name = '智能开关'
+        self._attr_is_on = False
+
     async def async_update(self):
         pass
     
