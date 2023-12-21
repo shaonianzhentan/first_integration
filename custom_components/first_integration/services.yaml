@@ -1,0 +1,17 @@
+send_message:
+  name: 发送消息
+  description: 发送消息到通知面板
+  fields:
+    entity_id:
+      description: 实体ID
+      example: 'switch.test'
+      required: true
+      selector:
+        entity:
+    message:
+      name: Message
+      description: 文本内容
+      example: '测试示例'
+      required: true
+      selector:
+        text:
